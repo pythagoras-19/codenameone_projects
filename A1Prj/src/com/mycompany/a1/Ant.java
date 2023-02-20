@@ -44,7 +44,12 @@ public class Ant extends Movable implements ISteerable {
 	 */
 	@Override
 	public void steer(int heading) {
-		// TODO Auto-generated method stub
+		if (heading > 359) {
+			heading = 0;
+		}
+		else if (heading < 0) {
+			heading = 359;
+		}
 		this.setHeading(heading);
 	}
 	
