@@ -31,7 +31,7 @@ public abstract class Movable extends GameObject {
 		if (this instanceof Spider) {
 			Random randomNum = new Random();
 			this.heading = 0 + randomNum.nextInt(359);
-			this.setSpeed();
+			this.setRandomSpeed();
 		}
 	}
 	
@@ -81,7 +81,11 @@ public abstract class Movable extends GameObject {
 		return heading;
 	}
 	
-	public void setSpeed() {
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	
+	public void setRandomSpeed() {
 		Random randomNum = new Random();
 		this.speed = 5 + randomNum.nextInt(10);
 	}
