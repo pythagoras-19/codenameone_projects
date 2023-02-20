@@ -110,8 +110,8 @@ public class Ant extends Movable implements ISteerable {
 	 * Set the speed of the Ant.
 	 * @param speed
 	 */
-	public void setSpeed(float speed) {
-		super.setSpeed();
+	public void setSpeed(int speed) {
+		super.setSpeed(speed); 
 	}
 	
 	/**
